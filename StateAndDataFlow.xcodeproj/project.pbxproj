@@ -11,6 +11,7 @@
 		B15B6448287B8BD800B9F58A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15B6447287B8BD800B9F58A /* ContentView.swift */; };
 		B15B644A287B8BDB00B9F58A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15B6449287B8BDB00B9F58A /* Assets.xcassets */; };
 		B15B644D287B8BDB00B9F58A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15B644C287B8BDB00B9F58A /* Preview Assets.xcassets */; };
+		B1B94149287F4E1D00564E35 /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B94148287F4E1D00564E35 /* TimeCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B15B6447287B8BD800B9F58A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B15B6449287B8BDB00B9F58A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B15B644C287B8BDB00B9F58A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B1B94148287F4E1D00564E35 /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				B15B6445287B8BD800B9F58A /* StateAndDataFlowApp.swift */,
 				B15B6447287B8BD800B9F58A /* ContentView.swift */,
+				B1B94148287F4E1D00564E35 /* TimeCounter.swift */,
 				B15B6449287B8BDB00B9F58A /* Assets.xcassets */,
 				B15B644B287B8BDB00B9F58A /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B15B6448287B8BD800B9F58A /* ContentView.swift in Sources */,
+				B1B94149287F4E1D00564E35 /* TimeCounter.swift in Sources */,
 				B15B6446287B8BD800B9F58A /* StateAndDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tapCount = 0
-
+    @StateObject private var timer = TimeCounter()
+    
     var body: some View {
         VStack {
-            Text("\(tapCount)")
+            Text("\(timer.counter)")
                 .font(.largeTitle)
                 .padding(.top, 100)
             Spacer()
-            ButtonView(tapCount: $tapCount)
+            ButtonView(timer: timer)
             Spacer()
         }
     }
@@ -29,11 +29,11 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct ButtonView: View {
-    @Binding var tapCount: Int
+    @ObservedObject var timer: TimeCounter
     
     var body: some View {
-        Button(action: { tapCount += 1 }) {
-            Text("Tap Me")
+        Button(action: { timer.startTimer() }) {
+            Text(timer.buttonTitle)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)

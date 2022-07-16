@@ -25,6 +25,11 @@ struct ContentView: View {
             }
             
             Spacer()
+            
+            ButtonView(title: "Log Out", color: Color.blue) {
+                userManager.name = ""
+                userManager.isRegistered = false
+            }
         }
         .padding([.top,.bottom], 40)
     }

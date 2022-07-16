@@ -6,8 +6,20 @@
 //
 
 import Combine
+import Foundation
 
 final class UserManager: ObservableObject {
-    @Published var isRegistered = false
-    var name = ""
+    
+    @Published var isRegistered = StorageManager.isRegistered {
+        didSet {
+            StorageManager.isRegistered = isRegistered
+        }
+    }
+    
+    var name = StorageManager.name {
+        didSet {
+            StorageManager.name = name
+        }
+    }
+
 }

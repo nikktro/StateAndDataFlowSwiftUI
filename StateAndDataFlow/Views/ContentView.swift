@@ -15,14 +15,18 @@ struct ContentView: View {
         VStack {
             Text("Hi, \(userManager.name)")
                 .font(.largeTitle)
-                .padding(.top, 20)
+            
             Text("\(timer.counter)")
                 .font(.largeTitle)
-                .padding(.top, 100)
-            Spacer()
-            ButtonView(timer: timer)
+                .padding([.top, .bottom], 60)
+            
+            ButtonView(title: timer.buttonTitle, color: Color.red) {
+                timer.startTimer()
+            }
+            
             Spacer()
         }
+        .padding([.top,.bottom], 40)
     }
 }
 
@@ -30,25 +34,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserManager())
-    }
-}
-
-struct ButtonView: View {
-    @ObservedObject var timer: TimeCounter
-    
-    var body: some View {
-        Button(action: { timer.startTimer() }) {
-            Text(timer.buttonTitle)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-        }
-        .frame(width: 200, height: 60)
-        .background(Color.red)
-        .cornerRadius(20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.black, lineWidth: 4)
-        )
     }
 }

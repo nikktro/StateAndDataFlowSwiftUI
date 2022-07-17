@@ -26,8 +26,7 @@ struct RegisterView: View {
                 
                 Text("\(userName.count)")
                     .padding(.trailing, -24)
-                    .foregroundColor( isNameLengthMatch
-                                      ? Color.green : Color.red )
+                    .foregroundColor( isNameLengthMatch ? .green : .red )
             }
             .padding()
             
@@ -36,9 +35,9 @@ struct RegisterView: View {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
-                .foregroundColor(isNameLengthMatch
-                                 ? Color.blue : Color.gray.opacity(0.5))
+                .foregroundColor(isNameLengthMatch ? .blue : .gray.opacity(0.5))
             }
+            .disabled(!isNameLengthMatch)
             
         }
     }
